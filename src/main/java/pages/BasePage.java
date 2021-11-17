@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,10 +20,12 @@ public class BasePage {
     public static final String BASE_URL = "https://hotzonegmbh.my.salesforce.com";
     public static final String OTHER_URLS = "https://hotzonegmbh.lightning.force.com/lightning/o/Account";
 
+    @Step("Opening '{url}'")
     public void openPage(String certainUrl) {
         driver.get(OTHER_URLS + certainUrl);
     }
 
+    @Step("Opening home page")
     public LoginPage openUrl() {
         driver.get(BASE_URL);
         return new LoginPage(driver);
