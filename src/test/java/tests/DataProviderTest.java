@@ -1,7 +1,6 @@
 package tests;
 
 import objects.Account;
-import objects.User;
 import org.testng.annotations.DataProvider;
 
 import java.util.Iterator;
@@ -14,8 +13,8 @@ public class DataProviderTest extends BaseTest {
     @DataProvider(name = "Create account")
     private static Iterator<Object[]> account() {
         return asList(
-                new Object[]{new User("ananastasja-0mcv@force.com", "Gq2KPsXekAb*ySd%")},
-                new Object[]{new Account("Hello world", "", "+375258547856", "", "", "Kunde")}
+                new Object[]{new Account("Hello world", "google.com", "+375258548556", "decr", "Kaiserdamm 125", "Analyst")},
+                new Object[]{new Account("Hello world", "tut.by", "+375258547856", "", "", "Kunde")}
         ).iterator();
     }
 }

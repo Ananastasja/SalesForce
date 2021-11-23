@@ -15,7 +15,7 @@ public class NewAccountPage extends BasePage{
 
     private static final String NEW_ACCOUNT_MODAL_PAGE = "/new";
 
-    @Step("Creating account with '{account}'")
+    @Step("Creating account with account name: '{account.accountName}', website: '{account.website}', phone: '{account.phone}', description: '{account.description}', billing street: '{account.billingAddress}', type: '{account.type}'")
     public NewAccountPage createAccount(Account account) {
         new InputField(driver, "Account Name").writeText(account.getAccountName());
         new InputField(driver, "Website").writeText(account.getWebsite());
