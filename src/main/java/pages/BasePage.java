@@ -20,13 +20,13 @@ public class BasePage {
     public static final String BASE_URL = "https://hotzonegmbh.my.salesforce.com";
     public static final String OTHER_URLS = "https://hotzonegmbh.lightning.force.com/lightning/o/Account";
 
-    @Step("Opening '{url}'")
+    @Step("Opening '{certainUrl}'")
     public void openPage(String certainUrl) {
         driver.get(OTHER_URLS + certainUrl);
     }
 
     @Step("Opening home page")
-    public LoginPage openUrl() {
+    public LoginPage openBaseUrl() {
         driver.get(BASE_URL);
         return new LoginPage(driver);
     }
